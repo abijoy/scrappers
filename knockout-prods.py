@@ -1,3 +1,10 @@
+'''
+Simple script to scrap list of products from knockout.com.bd 
+and saving the scrapped data to a csv file.
+[PUN]: onekdin por scrapping korte mon chaise tai kortesi; xD
+'''
+
+
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -9,6 +16,7 @@ with open('knock-out-output.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     # write the column-header in the first row
     writer.writerow(['Category', 'Product', 'Price'])
+    # page counts
     count = 1
     while True:
         # make request to the url
